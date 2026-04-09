@@ -1,4 +1,4 @@
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher, F, types
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
@@ -9,7 +9,7 @@ import asyncio
 class UploadProcess(StatesGroup):
     waiting_for_file = State()
 
-BOT_TOKEN = "YOUR_TOKEN_HERE"
+BOT_TOKEN = "8540988454:AAG6g3gvUMV9dROXmKlnzRvbS_tUu6bHhHw"
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
