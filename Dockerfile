@@ -19,4 +19,4 @@ RUN uv sync --no-dev
 
 COPY app/ ./app/
 
-CMD ["uv", "run", "python", "-m", "app.main"]
+CMD ["uv", "run", "python", "app/main.py"]
