@@ -1,0 +1,31 @@
+2026-04-09 17:20:10 | INFO     | __main__:main:127 - Starting bot...
+2026-04-09 17:20:46 | INFO     | __main__:cmd_start:38 - User 8774492895 started the bot.
+2026-04-09 17:21:06 | INFO     | __main__:handle_document_upload:50 - User 8774492895 uploaded a file: sample_text.pdf (ID: BQACAgIAAxkBAAMKadfgAvcQ8d47wdTjNb24W23Qeh8AAkabAAKNXMBKwsHGx-AzPbM7BA, Size: 1494 bytes)
+2026-04-09 17:21:06 | INFO     | __main__:handle_document_upload:55 - Validation successful for user 8774492895's file sample_text.pdf
+2026-04-09 17:21:06 | INFO     | __main__:handle_document_upload:74 - Downloading file sample_text.pdf to /app/temp/abc44c91f94747688ee088c480cbe85b.pdf
+2026-04-09 17:21:07 | INFO     | __main__:handle_document_upload:78 - Starting conversion for /app/temp/abc44c91f94747688ee088c480cbe85b.pdf
+2026-04-09 17:21:07 | INFO     | __main__:handle_document_upload:86 - Conversion successful, created /app/temp/abc44c91f94747688ee088c480cbe85b.docx
+2026-04-09 17:21:07 | INFO     | __main__:handle_document_upload:89 - Sending converted document abc44c91f94747688ee088c480cbe85b.docx to user 8774492895
+2026-04-09 17:21:07 | INFO     | __main__:handle_document_upload:100 - Cleaning up temporary files for abc44c91f94747688ee088c480cbe85b
+2026-04-09 17:21:07 | INFO     | __main__:handle_document_upload:104 - Deleted /app/temp/abc44c91f94747688ee088c480cbe85b.pdf
+2026-04-09 17:21:07 | INFO     | __main__:handle_document_upload:111 - Deleted /app/temp/abc44c91f94747688ee088c480cbe85b.docx
+2026-04-09 17:21:43 | INFO     | __main__:cmd_start:38 - User 8774492895 started the bot.
+2026-04-09 17:22:50 | INFO     | __main__:handle_document_upload:50 - User 8774492895 uploaded a file: Статистика - Неделя №1.pdf (ID: BQACAgIAAxkBAAMPadfgaps3Rz3FLf7ofA7Rb5U01QEAAk6bAAKNXMBK14AxGGjE8Fs7BA, Size: 2904857 bytes)
+2026-04-09 17:22:50 | INFO     | __main__:handle_document_upload:55 - Validation successful for user 8774492895's file Статистика - Неделя №1.pdf
+2026-04-09 17:22:50 | INFO     | __main__:handle_document_upload:74 - Downloading file Статистика - Неделя №1.pdf to /app/temp/50c685a009d74ab4b5ec1d764b76b61b.pdf
+2026-04-09 17:23:01 | INFO     | __main__:handle_document_upload:78 - Starting conversion for /app/temp/50c685a009d74ab4b5ec1d764b76b61b.pdf
+2026-04-09 17:23:15 | INFO     | __main__:handle_document_upload:86 - Conversion successful, created /app/temp/50c685a009d74ab4b5ec1d764b76b61b.docx
+2026-04-09 17:23:15 | INFO     | __main__:handle_document_upload:89 - Sending converted document 50c685a009d74ab4b5ec1d764b76b61b.docx to user 8774492895
+2026-04-09 17:23:16 | INFO     | __main__:handle_document_upload:100 - Cleaning up temporary files for 50c685a009d74ab4b5ec1d764b76b61b
+2026-04-09 17:23:16 | INFO     | __main__:handle_document_upload:104 - Deleted /app/temp/50c685a009d74ab4b5ec1d764b76b61b.pdf
+2026-04-09 17:23:16 | INFO     | __main__:handle_document_upload:111 - Deleted /app/temp/50c685a009d74ab4b5ec1d764b76b61b.docx
+2026-04-09 17:24:26 | INFO     | __main__:cmd_start:38 - User 8774492895 started the bot.
+2026-04-09 17:26:55 | INFO     | __main__:handle_document_upload:50 - User 8774492895 uploaded a file: Building Microservices - Designing Fine-Grained Systems.pdf (ID: BQACAgIAAxkBAAMUadfhXtxua88SH_zdMv6Ux6mpsd4AAlabAAKNXMBK3KNPLAR0qWo7BA, Size: 6072479 bytes)
+2026-04-09 17:26:55 | INFO     | __main__:handle_document_upload:55 - Validation successful for user 8774492895's file Building Microservices - Designing Fine-Grained Systems.pdf
+2026-04-09 17:26:55 | INFO     | __main__:handle_document_upload:74 - Downloading file Building Microservices - Designing Fine-Grained Systems.pdf to /app/temp/1da9a4246bad4a60bc1a4cfb49ae08fc.pdf
+2026-04-09 17:27:11 | INFO     | __main__:handle_document_upload:78 - Starting conversion for /app/temp/1da9a4246bad4a60bc1a4cfb49ae08fc.pdf
+2026-04-09 17:27:13 | INFO     | __main__:handle_document_upload:86 - Conversion successful, created /app/temp/1da9a4246bad4a60bc1a4cfb49ae08fc.docx
+2026-04-09 17:27:13 | INFO     | __main__:handle_document_upload:89 - Sending converted document 1da9a4246bad4a60bc1a4cfb49ae08fc.docx to user 8774492895
+2026-04-09 17:27:19 | INFO     | __main__:handle_document_upload:100 - Cleaning up temporary files for 1da9a4246bad4a60bc1a4cfb49ae08fc
+2026-04-09 17:27:19 | INFO     | __main__:handle_document_upload:104 - Deleted /app/temp/1da9a4246bad4a60bc1a4cfb49ae08fc.pdf
+2026-04-09 17:27:19 | INFO     | __main__:handle_document_upload:111 - Deleted /app/temp/1da9a4246bad4a60bc1a4cfb49ae08fc.docx

@@ -2,6 +2,6 @@ services:
   bot:
     build: .
     restart: unless-stopped
-    # env_file: .env
+    env_file: .env
     volumes:
       - ./temp:/app/temp
