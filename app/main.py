@@ -5,7 +5,6 @@ from pathlib import Path
 from aiogram import Bot, Dispatcher, F
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
-from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import Message, FSInputFile
 from pydantic_settings import BaseSettings
 from loguru import logger
@@ -22,9 +21,6 @@ class Settings(BaseSettings):
         env_file_encoding = "utf-8"
         extra = "ignore"
 
-class UploadProcess(StatesGroup):
-    waiting_for_file = State()
-
 settings = Settings()
 bot = Bot(token=settings.bot_token)
 dp = Dispatcher()
@@ -33,15 +29,17 @@ TEMP_DIR = Path("/app/temp")
 TEMP_DIR.mkdir(parents=True, exist_ok=True)
 
 @dp.message(Command("start"))
-async def cmd_start(message: Message, state: FSMContext) -> None:
+async def cmd_start(message: Message) -> None:
     """Handle /start command."""
     logger.info(f"User {message.from_user.id} started the bot.")
-    await message.answer("Welcome! Please upload a file (like a PDF or ZIP).")
-    await state.set_state(UploadProcess.waiting_for_file)
+    await message.answer("Welcome! You can send me a PDF file anytime, and I will convert it to Word for you.")
 
-@dp.message(UploadProcess.waiting_for_file, F.document)
+@dp.message(F.document)
 async def handle_document_upload(message: Message, state: FSMContext) -> None:
-    """Handle document uploads for conversion."""
+    """Handle document uploads for conversion on-demand."""
+    # Clear any existing FSM state gracefully
+    await state.clear()
+    
     user_id = message.from_user.id
     file_id = message.document.file_id
     file_name = message.document.file_name or "uploaded.pdf"
@@ -76,6 +74,7 @@ async def handle_document_upload(message: Message, state: FSMContext) -> None:
         
         # 3. Convert
         logger.info(f"Starting conversion for {pdf_path}")
+        # Using asyncio.to_thread to keep the bot responsive during heavy CPU tasks
         await asyncio.to_thread(
             convert_pdf_to_word, 
             pdf_path, 
@@ -111,15 +110,12 @@ async def handle_document_upload(message: Message, state: FSMContext) -> None:
                 logger.info(f"Deleted {docx_path}")
             except Exception as e:
                 logger.error(f"Failed to delete {docx_path}: {e}")
-                
-        # Clear state
-        await state.clear()
 
-@dp.message(UploadProcess.waiting_for_file)
+@dp.message()
 async def handle_invalid_upload(message: Message) -> None:
-    """Handle invalid non-document messages during upload state."""
+    """Handle non-document messages (fallback guide)."""
     logger.warning(f"User {message.from_user.id} sent an invalid message type.")
-    await message.answer("That doesn't look like a document. Please upload a file.")
+    await message.answer("Please send me a PDF file to convert to Word.")
 
 async def main() -> None:
     """Main bot execution."""
